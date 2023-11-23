@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container  mt-5 bg-body-secondary p-3 rounded-3 shadow  ">
+        <form action="">
+            <input type="text" class="form-control mb-3" value="" id="nombre" placeholder="Nombre" minlength=4
+                maxlength=40 required>
+
+            <input type="number" class="form-control w-25 mb-3" value="" id="edad" placeholder="Edad" min="13" max="100"
+                required>
+
+            <div class="d-flex">
+                <input type="number" class="form-control w-25 mb-3" value="" id="dni" placeholder="DNI" min="1"
+                    max="99999999" required>
+                <input type="button" class="btn btn-warning mb-3 ms-3" id="botonDni" value="Generar DNI">
+            </div>
+
+            <div>
+                <label for="genero" id="genero"></label>
+
+                <input type="radio" class="form-check-input mb-3" name="genero" id="generoHombre" value="Hombre">
+                <label class="form-check-label">Hombre</label>
+
+                <input type="radio" class="form-check-input ms-3" name="genero" id="generoMujer" value="Mujer">
+                <label class="form-check-label">Mujer</label>
+            </div>
+
+            <div class="d-flex justify-content-around">
+                <div class="input-group mb-3 w-25">
+                    <input type="number" class="form-control" value="" placeholder="Peso" min="45" max="200" id="peso"
+                        required>
+                    <span class="input-group-text">KG</span>
+                </div>
+                <div class="input-group mb-3 w-25">
+                    <input type="number" class="form-control" value="" placeholder="Altura" min="146" max="2000"
+                        id="altura" required>
+                    <span class="input-group-text">cm</span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center mb-3">
+                <input type="range" class="form-range" value="0" id="rangoAnio" min="1930" max="2010">
+                <span class="bg-success rounded ms-3 p-2" id="anioNacimiento" value="">1930</span>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="botonEnviar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Verificar datos
+            </button>
+
+           
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="titleModal"></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="bodyModal">
+                            
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="./js/apps.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</html>
